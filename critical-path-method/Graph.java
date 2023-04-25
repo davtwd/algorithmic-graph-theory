@@ -24,7 +24,7 @@ public class Graph {
 		ArrayList<Vertex> topologicalOrder = getTopologicalOrdering();
 		int[] beginnings = new int[topologicalOrder.size()];
 		int[] ends = new int[topologicalOrder.size()];
-		int[] maxDuration = new int[topologicalOrder.size()];
+		int[] deadlines = new int[topologicalOrder.size()];
 		int[] reserves = new int[topologicalOrder.size()];
 		int overallDuration = 0;
 
@@ -58,9 +58,9 @@ public class Graph {
 
 		ArrayList<Integer> criticalActions = new ArrayList<Integer>();
 
-		for (int i = 1; i < maxDuration.length; i++) {
-			maxDuration[i] = ends[i] - beginnings[i];
-			reserves[i] = maxDuration[i] - this.vertexList.get(i).getDuration();
+		for (int i = 1; i < deadlines.length; i++) {
+			deadlines[i] = ends[i] - beginnings[i];
+			reserves[i] = deadlines[i] - this.vertexList.get(i).getDuration();
 
 			if (reserves[i] == 0) {
 				criticalActions.add(i);
