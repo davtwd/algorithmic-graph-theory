@@ -30,6 +30,14 @@ public class Graph {
 	 * then t(j) = t(i) + c(i, j)
 	 *	  	x(j) = i
 	 */
+
+	/**
+	 * Implements the label-setting algorithm to find the shortest path between two vertices in the graph.
+	 * The final shortest path and its distance are printed to the console.
+	 * 
+	 * @param from	The starting vertex for the shortest path.
+	 * @param to	The target vertex for the shortest path.
+	 */
 	public void findShortestPath(int from, int to) {
 
 		int[] distances = new int[this.vertexList.size()]; // t(v)
