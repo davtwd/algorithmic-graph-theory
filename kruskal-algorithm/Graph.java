@@ -26,11 +26,11 @@ public class Graph {
 		long sortTimer = System.nanoTime();
 
 		Collections.sort(this.edgeList, new Comparator<Edge>() {
-            @Override
-            public int compare(Edge e1, Edge e2) {
-                return Integer.compare(e1.getCost(), e2.getCost());
-            }
-        });
+			@Override
+			public int compare(Edge e1, Edge e2) {
+				return Integer.compare(e1.getCost(), e2.getCost());
+			}
+		});
 
 		if (!minimum) {
 			Collections.reverse(this.edgeList);
@@ -57,11 +57,11 @@ public class Graph {
 		// Spanning Tree output
 		/*for (int i = 0; i < this.spanningTree.size(); i++) {
 			Edge e = this.spanningTree.get(i);
-            System.out.print("(" + e.getA() + ", " + e.getB() + ", " + e.getCost() + ")");
+			System.out.print("(" + e.getA() + ", " + e.getB() + ", " + e.getCost() + ")");
 			if (i < this.spanningTree.size() - 1) {
 				System.out.print(";");
 			}
-        }*/
+		}*/
 	}
 
 	private int find(int vertex) {

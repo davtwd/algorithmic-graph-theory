@@ -11,7 +11,7 @@ public class Graph {
 		this.vertexList = vertexList;
 
 		for (Edge edge : this.edgeList) {
-            this.vertexList.get(edge.getB()).addInputEdge(edge);
+			this.vertexList.get(edge.getB()).addInputEdge(edge);
 			this.vertexList.get(edge.getA()).addOutputEdge(edge);
 		}
 
@@ -86,7 +86,7 @@ public class Graph {
 				System.out.print(", ");
 			} else System.out.println("]");
 		}
-        
+		
 		System.out.print("The latest action ends: [");
 		for (int i = 0; i < ends.length; i++) {
 			System.out.print(ends[i]);
@@ -99,36 +99,36 @@ public class Graph {
 	}
 
 	public ArrayList<Vertex> getTopologicalOrdering() { // monotone numbering (also known as topological numbering or topological ordering)
-        ArrayList<Vertex> order = new ArrayList<Vertex>();
-        int[] inputs = new int[this.vertexList.size()];
-        
-        for (int i = 0; i < inputs.length; i++) {
+		ArrayList<Vertex> order = new ArrayList<Vertex>();
+		int[] inputs = new int[this.vertexList.size()];
+		
+		for (int i = 0; i < inputs.length; i++) {
 			inputs[i] = this.vertexList.get(i).getInputEdges().size();
-        }
-        
-        while (true) {
+		}
+		
+		while (true) {
 
-            Vertex root = null;
-            
-            for (int i = 0; i < inputs.length; i++) {
-                if (inputs[i] == 0) {
-                    inputs[i] = -1;
-                    root = this.vertexList.get(i);
-                    break;
-                }
-            }
-            
-            if (root == null) {
-                break;
-            }
-            
-            order.add(root);
-            
-            for (Edge e : root.getOutputEdges()) {
-                inputs[e.getB()]--;
-            }
-        }
-        
+			Vertex root = null;
+			
+			for (int i = 0; i < inputs.length; i++) {
+				if (inputs[i] == 0) {
+					inputs[i] = -1;
+					root = this.vertexList.get(i);
+					break;
+				}
+			}
+			
+			if (root == null) {
+				break;
+			}
+			
+			order.add(root);
+			
+			for (Edge e : root.getOutputEdges()) {
+				inputs[e.getB()]--;
+			}
+		}
+		
 		if (order.size() != this.vertexList.size()) {
 			System.out.println("The graph is not acyclic!");
 			return order;
@@ -142,7 +142,7 @@ public class Graph {
 			}
 		}
 		System.out.println();
-        
-        return order;
-    }
+		
+		return order;
+	}
 }
