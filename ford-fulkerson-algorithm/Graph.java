@@ -16,13 +16,16 @@ public class Graph {
 		}
 	}
 
-	public int getMaxFlow(int source, int sink) {
+	public void getMaxFlow(int source, int sink) {
 
 		int maxFlow = 0;
+		int minCost = 0;
 		int[] parent = new int[vertexList.size()];
 
 		while (bfs(source, sink, parent)) {
+
 			int pathFlow = Integer.MAX_VALUE;
+
 			for (int v = sink; v != source; v = parent[v]) {
 				int u = parent[v];
 				for (Edge e : this.edgeList) {
@@ -37,17 +40,22 @@ public class Graph {
 				for (Edge e : this.edgeList) {
 					if (e.getA() == u && e.getB() == v) {
 						e.setCapacity(e.getCapacity() - pathFlow);
+						minCost += pathFlow * e.getCost();
 					} else if (e.getA() == v && e.getB() == u) {
 						e.setCapacity(e.getCapacity() + pathFlow);
+						minCost -= pathFlow * e.getCost();
 					}
 				}
 			}
 			maxFlow += pathFlow;
 		}
 
-		return maxFlow;
+		System.out.println("Source: " + source);
+		System.out.println("Sink: " + sink);
+		System.out.println("Maximal flow: " + maxFlow);
+		System.out.println("Minimum-cost flow: " + minCost);
 	}
-	
+
 	private boolean bfs(int source, int sink, int[] parent) { // breadth-first search 
 
 		boolean[] visited = new boolean[vertexList.size()];

@@ -12,6 +12,7 @@ public class Main {
 		try (Scanner scan = new Scanner(new File(path))) {
 			System.out.println("Loading graph data...");
 			while (scan.hasNextInt()) {
+
 				int from = scan.nextInt();
 				int to = scan.nextInt();
 				int cost = scan.nextInt();
@@ -23,6 +24,6 @@ public class Main {
 		} catch (Exception e) { throw new RuntimeException("File " + path + " not found"); }
 
 		Graph graph = new Graph(edgeList, maxVertex);
-		System.out.println("Maximal flow: " + graph.getMaxFlow(1, maxVertex));
+		graph.getMaxFlow(1, maxVertex);
 	}
 }

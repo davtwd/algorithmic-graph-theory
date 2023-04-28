@@ -1,23 +1,23 @@
 public class Edge {
 
-	private int A;
-	private int B;
+	private int a;
+	private int b;
 	private int cost;
 	private int capacity;
 
 	public Edge (int from, int to, int cost, int capacity) { 
-		this.A = from;
-		this.B = to;
+		this.a = from;
+		this.b = to;
 		this.cost = cost;
 		this.capacity = capacity;
 	}
 
 	public int getA() {
-		return this.A;
+		return this.a;
 	}
 
 	public int getB() {
-		return this.B;
+		return this.b;
 	}
 
 	public int getCost() {
