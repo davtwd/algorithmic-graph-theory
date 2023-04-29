@@ -26,4 +26,4 @@ For selecting a vertex, we use the set *𝜺*, which will contain unprocessed ve
 
 To start finding the shortest path in a graph, we begin with the starting vertex and add it to a set called *𝜺*. Then we select a vertex from *𝜺* and look at all the edges coming out of it. Whenever we find a new vertex along the way, we add it to *𝜺* so we can explore it later.
 
-**Label set** - implementation of Dijkstra's algorithm - We first process the vertex from the set 𝜀 with the lowest label t(i)."
+**Label set** - implementation of Dijkstra's algorithm - We first process the vertex from the set 𝜀 with the lowest label t(i).
