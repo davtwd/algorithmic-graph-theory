@@ -2,8 +2,6 @@
 
  This repository contains my work during a semester, focused on implementing algorithms such as "shortest-path" using the labelset method, "kruskal-algorithm," "critical-path-method," and the "ford-fulkerson-algorithm" to find maximal flow. 
 
- In addition to the code and data for each algorithm, I have included a summary of the relevant theory. This summary is intended to provide a quick reference for those who may be unfamiliar with the algorithm or need a refresher on its concepts.
-
 ## Installlation
 
 ```
