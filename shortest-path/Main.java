@@ -18,6 +18,7 @@ public class Main {
 		try (Scanner scan = new Scanner(new File(path))) {
 			System.out.println("Loading graph data...");
 			while (scan.hasNextInt()) {
+				
 				int from = scan.nextInt();
 				int to = scan.nextInt();
 				int cost = scan.nextInt();

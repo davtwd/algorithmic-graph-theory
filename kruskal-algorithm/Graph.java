@@ -40,7 +40,7 @@ public class Graph {
 		long timer = System.nanoTime();
 		
 		for (Edge e : this.edgeList) {
-			if (find(e.getA()) != find(e.getB())) {
+			if (lookup(e.getA()) != lookup(e.getB())) {
 				this.spanningTree.add(e);
 				cost += e.getCost();
 				merge(e.getA(), e.getB());
@@ -64,15 +64,15 @@ public class Graph {
 		}*/
 	}
 
-	private int find(int vertex) {
+	private int lookup(int vertex) {
 		if (this.vertexList.get(vertex).getId() == vertex) {
 			return vertex;
 		}
-		this.vertexList.get(vertex).setId(find(this.vertexList.get(vertex).getId()));
+		this.vertexList.get(vertex).setId(lookup(this.vertexList.get(vertex).getId()));
 		return this.vertexList.get(vertex).getId();
 	}
 
 	private void merge(int vA, int vB) {
-		this.vertexList.get(find(vA)).setId(find(vB));
+		this.vertexList.get(lookup(vA)).setId(lookup(vB));
 	}
 }

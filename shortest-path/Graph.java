@@ -67,7 +67,6 @@ public class Graph {
 			if (!edgeMap.containsKey(e.getA())) {
 				edgeMap.put(e.getA(), new ArrayList<Edge>());
 			}
-
 			edgeMap.get(e.getA()).add(e);
 		}
 		epsilon.add(from);
