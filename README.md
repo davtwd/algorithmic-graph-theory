@@ -1,6 +1,6 @@
 # algorithmic-graph-theory
 
- This repository contains my work during a semester, focused on implementing algorithms such as "shortest-path" using the labelset method, "kruskal-algorithm," "critical-path-method," and the "ford-fulkerson-algorithm" to find maximal flow. 
+ This repository contains my work during a semester, focused on implementing algorithms such as "shortest-path" using the labelset method, "kruskal-algorithm," "critical-path-method," and the "maximal-flow" to calculate maximal flow and minimal cost using Dijkstra's shortest path. 
 
 ## Installlation
 
