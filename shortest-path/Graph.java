@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -45,12 +44,7 @@ public class Graph {
 
 		int rootVertex = 0;
 		Map<Integer, List<Edge>> edgeMap = new HashMap<Integer, List<Edge>>();
-		PriorityQueue<Integer> epsilon = new PriorityQueue<Integer>(new Comparator<Integer>() {
-			@Override
-			public int compare(Integer vertex1, Integer vertex2) {
-				return (distances[vertex1] > distances[vertex2]) ? 1 : ((distances[vertex1] < distances[vertex2]) ? -1 : 0);
-			}
-		});
+		PriorityQueue<Integer> epsilon = new PriorityQueue<Integer>((u, v) -> distances[u] - distances[v]);
 
 		long timer = System.nanoTime();
 		
