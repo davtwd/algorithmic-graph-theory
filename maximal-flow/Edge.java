@@ -49,4 +49,8 @@ public class Edge {
 	public void addFlow(int flow) {
 		this.flow += flow;
 	}
+		
+	public Edge getReverseEdge() {
+		return new Edge(this.b, this.a, -this.cost, 0, -this.flow);
+	}
 }

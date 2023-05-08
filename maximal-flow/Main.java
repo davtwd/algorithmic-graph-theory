@@ -7,7 +7,7 @@ public class Main {
 	public static void main(String[] args) {		
 		int maxVertex = 0;
 		ArrayList<Edge> edgeList = new ArrayList<>();
-		String path = "./data/midi.hrn";
+		String path = "./data/mini2.txt";
 		
 		try (Scanner scan = new Scanner(new File(path))) {
 			System.out.println("Loading graph data...");
