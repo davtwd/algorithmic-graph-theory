@@ -12,6 +12,38 @@ git clone https://github.com/davtwd/algorithmic-graph-theory.git
 
 To run the program, simply execute the `main` file in the root directory, **nothing is shared between the folders**. All necessary dependencies are included in the folder.
 
+## Datasets
+
+### critical-path-method and shortest-path
+
+#### .txt
+
+This dataset contains information about edges. Each line represents a single edge, and the corresponding data provides information about that edge.
+
+| column 1  | column 2  | column 3  |
+|:---------:|:---------:|:---------:|
+| source  | destination  | cost  |
+
+#### .tim
+
+This file has a simple structure, where each vertex has a single line representing the duration of the activity. Each line corresponds to a vertex, and the line number in the file corresponds to the index of the vertex. The first line is for vertex 1, the second line is for vertex 2, and so on.
+
+### kruskal-algorithm
+
+#### .txt
+
+This dataset contains information about edges. Each line represents a single edge, and the corresponding data provides information about that edge.
+
+### maximal-flow
+
+#### .txt
+
+This dataset represents a list of edges, similar to other datasets. Each line in the dataset contains several items separated by spaces, representing the following values: "number of the starting vertex", "number of the ending vertex", "edge cost", and "edge capacity".
+
+| column 1  | column 2  | column 3  | column 4  |
+|:---------:|:---------:|:---------:|:---------:|
+| source  | destination  | cost  | flow |
+
 ## Contributing
 
 If you find a bug or would like to suggest an improvement, feel free to submit a pull request. I would love to see this project grow and improve over time.
