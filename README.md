@@ -46,7 +46,7 @@ This dataset represents a list of edges, similar to other datasets. Each line in
 
 | column 1  | column 2  | column 3  | column 4  |
 |:---------:|:---------:|:---------:|:---------:|
-| source  | destination  | cost  | flow |
+| source  | destination  | cost  | capacity |
 
 ## Contributing
 
