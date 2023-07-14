@@ -14,7 +14,7 @@ To run the program, simply execute the `main` file in the root directory, **noth
 
 ## Datasets
 
-### critical-path-method and shortest-path
+### critical-path-method
 
 #### .txt
 
@@ -28,11 +28,15 @@ This dataset contains information about edges. Each line represents a single edg
 
 This file has a simple structure, where each vertex has a single line representing the duration of the activity. Each line corresponds to a vertex, and the line number in the file corresponds to the index of the vertex. The first line is for vertex 1, the second line is for vertex 2, and so on.
 
-### kruskal-algorithm
+### kruskal-algorithm and shortest-path
 
 #### .txt
 
 This dataset contains information about edges. Each line represents a single edge, and the corresponding data provides information about that edge.
+
+| column 1  | column 2  | column 3  |
+|:---------:|:---------:|:---------:|
+| source  | destination  | cost  |
 
 ### maximal-flow
 
