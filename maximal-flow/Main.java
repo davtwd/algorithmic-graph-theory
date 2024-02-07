@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) {		
+	public static void main(String[] args) {
 		int maxVertex = 0;
 		ArrayList<Edge> edgeList = new ArrayList<>();
 		String path = "./data/mini2.txt";

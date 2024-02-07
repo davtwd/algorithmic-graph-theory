@@ -67,7 +67,7 @@ public class Graph {
 			}
 		}
 
-		double elapsedTime = (double) (System.nanoTime() - timer) / 1_000_000_000;
+		double elapsedTime = (double)(System.nanoTime() - timer) / 1_000_000_000;
 
 		System.out.println("The duration of the project: " + overallDuration);
 

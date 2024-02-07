@@ -25,9 +25,9 @@ public class Graph {
 	 * t(v) - the distance of vertex v from the starting vertex of the path
 	 * x(v) - the predecessor of vertex v on the path from the starting vertex
 	 * 
-	 * if   t(j) > t(i) + c(i, j)
-	 * then t(j) = t(i) + c(i, j)
-	 *	  	x(j) = i
+	 * if	t(j) > t(i) + c(i, j)
+	 * then	t(j) = t(i) + c(i, j)
+	 * 		x(j) = i
 	 */
 
 	/**
@@ -81,7 +81,7 @@ public class Graph {
 			}
 		}
 
-		double elapsedTime = (double) (System.nanoTime() - timer) / 1_000_000_000;
+		double elapsedTime = (double)(System.nanoTime() - timer) / 1_000_000_000;
 
 		int next = to;
 		int distance = distances[to];

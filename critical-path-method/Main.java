@@ -7,7 +7,7 @@ public class Main {
 	// without format, just a name
 	private static String file_name = "midi";
 
-	public static void main(String[] args) {		
+	public static void main(String[] args) {
 		int maxVertex = 0;
 		String path = new String();
 		ArrayList<Edge> edgeList = new ArrayList<>();

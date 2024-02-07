@@ -47,12 +47,12 @@ public class Graph {
 			}
 		}
 
-		double elapsedTime = (double) (System.nanoTime() - timer) / 1_000_000_000;
+		double elapsedTime = (double)(System.nanoTime() - timer) / 1_000_000_000;
 
 		System.out.println("Type: " + (minimum ? "minimum" : "maximum"));
 		System.out.println("Cost: " + cost);
 		System.out.println("Time: " + String.format("%.3fs", elapsedTime));
-		System.out.println("Time (with sorting): " + String.format("%.3fs", (double) (System.nanoTime() - sortTimer) / 1_000_000_000));
+		System.out.println("Time (with sorting): " + String.format("%.3fs", (double)(System.nanoTime() - sortTimer) / 1_000_000_000));
 
 		// Spanning Tree output
 		/*for (int i = 0; i < this.spanningTree.size(); i++) {

@@ -21,7 +21,7 @@ public class Graph {
 
 		int maxFlow = 0;
 		int minCost = 0;
-		int[] parent = new int[vertexList.size()];
+		int[] parent = new int[this.vertexList.size()];
 	
 		while (dijkstra(source, sink, parent)) {
 	
@@ -69,7 +69,7 @@ public class Graph {
 
 	private boolean dijkstra(int source, int sink, int[] parent) {
 
-		int[] dist = new int[vertexList.size()];
+		int[] dist = new int[this.vertexList.size()];
 		
 		for (int i = 0; i < dist.length; i++) {
 			dist[i] = Integer.MAX_VALUE;
@@ -77,7 +77,7 @@ public class Graph {
 
 		dist[source] = 0;
 
-		boolean[] visited = new boolean[vertexList.size()];
+		boolean[] visited = new boolean[this.vertexList.size()];
 
 		PriorityQueue<Integer> epsilon = new PriorityQueue<>((u, v) -> dist[u] - dist[v]);
 		epsilon.add(source);
